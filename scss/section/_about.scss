@@ -1,0 +1,22 @@
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+.about-bg {
+  .feature {
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .title {
+    font-family: $--font-semi-bold;
+    color: $--color-primary;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}

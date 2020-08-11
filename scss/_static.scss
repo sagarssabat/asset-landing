@@ -1,0 +1,29 @@
+.static-info {
+
+  ul,
+  ol,
+  p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  ul {
+    padding-inline-start: 40px;
+    list-style: disc;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  a {
+    font-family: $--font-semi-bold;
+    color: $--color-highlight;
+  }
+
+  .title {
+    font-family: $--font-bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}

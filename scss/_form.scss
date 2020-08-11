@@ -1,0 +1,28 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.form-control {
+  background-color: $--color-light-secondary;
+  border: 1px solid $--color-light-secondary;
+  transition: 0.2s;
+
+  &:focus {
+    border: 1px solid darken($--color-light-secondary, 10%);
+    box-shadow: none;
+    background-color: $--color-light-secondary;
+  }
+
+  &--highlight {
+    color: $--color-highlight;
+    font-family: $--font-semi-bold;
+    font-size: 14px;
+
+    &:focus {
+      color: $--color-highlight;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 576px) {}

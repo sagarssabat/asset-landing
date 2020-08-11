@@ -1,0 +1,56 @@
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+.sitenav {
+  &__wrap {
+    @include flexbox();
+    @include align-items(center);
+    font-family: $--font-semi-bold;
+  }
+
+  &__linklist {
+    @include flexbox();
+  }
+
+  &__linkitem {
+    text-transform: capitalize;
+    color: $--color-white;
+    transition: 0.4s;
+
+    a {
+      margin: 0 12px;
+      padding: 7px 0;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0%;
+        transition: 0.4s;
+        border-bottom: 2px solid $--color-white;
+        margin: auto;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    .sitenav {
+      &__linkitem {
+        a {
+          &:after {
+            border-bottom: 2px solid $--color-black;
+          }
+        }
+      }
+    }
+  }
+}

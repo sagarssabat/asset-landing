@@ -1,0 +1,10 @@
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+.feature-bg {
+  .feature {
+    &__img {
+      border: 10px solid $--color-white;
+    }
+  }
+}

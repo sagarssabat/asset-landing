@@ -1,0 +1,6 @@
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+.login-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(80, 110, 250, 0.1) 0%, rgba(80, 110, 250, 0.1) 33.333%, rgba(80, 110, 250, 0.3) 33.333%, rgba(80, 110, 250, 0.3) 66.666%, rgba(80, 110, 250, 0.5) 66.666%, rgba(80, 110, 250, 0.5) 99.999%);
+}

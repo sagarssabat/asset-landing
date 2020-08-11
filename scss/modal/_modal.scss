@@ -1,0 +1,53 @@
+@import "_add-newmember.scss";
+
+.modal {
+  &-backdrop {
+    background: rgba(242, 246, 250, 0.83);
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  &-content {
+    border: none;
+    box-shadow: 0px 4px 4px rgba($--color-black, 0.25);
+  }
+
+  &-header,
+  &-body,
+  &-footer {
+    padding: 10px;
+  }
+
+  &-header {
+    background-color: $--color-primary;
+    color: $--color-white;
+  }
+
+  &-title {
+    @include flexbox();
+    @include align-items(center);
+    font-family: $--font-bold;
+    font-size: 16px;
+    text-transform: capitalize;
+
+    .feather {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .close {
+    color: $--color-white;
+    opacity: 1;
+    font-size: 22px;
+    text-shadow: none;
+  }
+
+  &-open {
+    .site-wrap {
+      filter: blur(3px);
+    }
+  }
+}
