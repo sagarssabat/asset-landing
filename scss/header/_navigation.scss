@@ -18,6 +18,7 @@
     transition: 0.4s;
 
     a {
+      @include flexbox();
       margin: 0 12px;
       padding: 7px 0;
       position: relative;
