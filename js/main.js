@@ -34,8 +34,8 @@ $(document).on('click', '.navbar-collapse.show', function (e) {
   }
 });
 
-$("#navbarCollapse").scrollspy({
-  offset: 70
+$(".sitenav__links").scrollspy({
+  offset: 80
 });
 
 // $('.img-zoom').magnificPopup({

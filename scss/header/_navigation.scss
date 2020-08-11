@@ -40,6 +40,14 @@
         }
       }
     }
+
+    &.active {
+      a {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &.sticky {

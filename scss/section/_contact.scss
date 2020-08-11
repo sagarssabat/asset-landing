@@ -1,0 +1,62 @@
+@import "../_mixins.scss";
+@import "../_variables.scss";
+
+.contact-bg {
+  background-color: $--color-primary;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0e64c8+0,5aa2f0+100 */
+  background: rgb(14, 100, 200);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(14, 100, 200, 1) 0%, rgba(90, 162, 240, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(14, 100, 200, 1) 0%, rgba(90, 162, 240, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(14, 100, 200, 1) 0%, rgba(90, 162, 240, 1) 100%);
+
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  &:before {
+    content: '';
+    background-color: rgba($--color-black, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.section-roll {
+    min-height: calc(100vh - 155px);
+  }
+
+  .section-content {
+    .section {
+
+      &__title,
+      &__text {
+        color: $--color-white;
+      }
+    }
+  }
+
+  .contactus {
+    max-width: 650px;
+    margin: 0 auto;
+
+    .form-control {
+      padding: 22px 12px;
+      background-color: darken($--color-darker-primary, 20%);
+      border: 1px solid darken($--color-darker-primary, 20%);
+      transition: 0.2s;
+      color: $--color-white;
+
+      &::placeholder {
+        color: rgba($--color-primary, 0.5);
+      }
+
+      &:focus {
+        border: 1px solid darken($--color-darker-primary, 20%);
+        box-shadow: none;
+        background-color: darken($--color-darker-primary, 20%);
+      }
+    }
+  }
+}

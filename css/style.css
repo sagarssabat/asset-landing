@@ -48,6 +48,9 @@
 .sitenav__linkitem a:hover:after {
   width: 100%;
 }
+.sitenav__linkitem.active a:after {
+  width: 100%;
+}
 .sitenav.sticky .sitenav__linkitem a:after {
   border-bottom: 2px solid #000000;
 }
@@ -335,8 +338,49 @@
 /* Color Variables */
 /* Button Variables */
 /* Font Variables */
-footer {
+.footer-bg {
   position: relative;
+  background-color: #5aa2f0;
+  background-color: #073469;
+  color: #d4e2f3;
+  font-size: 18px;
+}
+.footer-bg:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-bg .footer__img {
+  width: 180px;
+  margin: 0 auto;
+}
+.footer-bg .footer__bar .bar-wrap,
+.footer-bg .footer__bar .terms-service {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+.footer-bg .footer__bar .terms-service li + li {
+  margin-left: 20px;
+}
+.footer-bg .footer__bar .terms-service a {
+  display: block;
+  padding: 5px 0;
 }
 
 /* Color Variables */
@@ -606,6 +650,10 @@ button.btn-icon .feather {
   border: 1px solid #5aa2f0;
 }
 
+.section-content {
+  position: relative;
+  z-index: 1;
+}
 .section-content .section__title {
   font-family: "Dosis-Bold";
   color: #0E64C8;
@@ -615,14 +663,16 @@ button.btn-icon .feather {
 }
 .section-content .section__text {
   max-width: 550px;
+  font-size: 18px;
   margin: 20px auto;
 }
 
 .section-roll {
   padding: 82px 0;
   min-height: 100vh;
+  position: relative;
 }
-.section-roll:nth-child(even) {
+.section-roll:nth-child(odd) {
   background-color: rgba(212, 226, 243, 0.3);
 }
 
