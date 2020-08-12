@@ -13,10 +13,12 @@
 $(window).on('scroll', function () {
   var scroll = $(window).scrollTop();
 
-  if (scroll >= 50) {
-    $(".sitenav").addClass("sticky");
-  } else {
-    $(".sitenav").removeClass("sticky");
+  if ($(window).width() > 769) {
+    if (scroll >= 50) {
+      $(".sitenav").addClass("sticky");
+    } else {
+      $(".sitenav").removeClass("sticky");
+    }
   }
 });
 
@@ -75,3 +77,10 @@ $('.back_top').on('click', function () {
 particlesJS.load('particles-js', '../assets/particles.json', function () {
   console.log('callback - particles.js config loaded');
 });
+
+let hamburger = document.querySelector('.sitenav__hamburger');
+let openMenu = document.querySelector('.sitenav__links');
+hamburger.addEventListener('click', function () {
+  hamburger.classList.toggle('active');
+  openMenu.classList.toggle('active');
+})

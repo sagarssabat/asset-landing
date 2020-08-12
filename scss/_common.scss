@@ -247,6 +247,13 @@ button {
   z-index: 1;
 
   .section {
+    &__small-title {
+      color: $--color-highlight;
+      font-family: $--font-bold;
+      text-transform: capitalize;
+      font-size: 14px;
+    }
+
     &__title {
       font-family: $--font-bold;
       color: $--color-darker-primary;
@@ -258,7 +265,25 @@ button {
     &__text {
       max-width: 550px;
       font-size: 18px;
-      margin: 20px auto;
+      margin: 10px auto 20px;
+    }
+
+    &__border {
+      position: relative;
+
+      img {
+        width: 15px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $--color-highlight;
+        width: 80px;
+        height: 1px;
+      }
     }
   }
 }
@@ -281,5 +306,11 @@ button {
 @media only screen and (max-width: 768px) {
   button {
     min-width: 80px;
+  }
+
+  .section-content {
+    .section__text {
+      font-size: 16px;
+    }
   }
 }

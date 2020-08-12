@@ -38,25 +38,34 @@
   }
 
   .contactus {
-    max-width: 650px;
     margin: 0 auto;
 
-    .form-control {
-      padding: 22px 12px;
-      background-color: darken($--color-darker-primary, 20%);
-      border: 1px solid darken($--color-darker-primary, 20%);
-      transition: 0.2s;
+    // .form-control {
+    //   padding: 22px 12px;
+    //   background-color: darken($--color-darker-primary, 20%);
+    //   border: 1px solid darken($--color-darker-primary, 20%);
+    //   transition: 0.2s;
+    //   color: $--color-white;
+
+    //   &::placeholder {
+    //     color: rgba($--color-primary, 0.5);
+    //   }
+
+    //   &:focus {
+    //     border: 1px solid darken($--color-darker-primary, 20%);
+    //     box-shadow: none;
+    //     background-color: darken($--color-darker-primary, 20%);
+    //   }
+    // }
+  }
+
+  .contact {
+    &__text {
       color: $--color-white;
+    }
 
-      &::placeholder {
-        color: rgba($--color-primary, 0.5);
-      }
-
-      &:focus {
-        border: 1px solid darken($--color-darker-primary, 20%);
-        box-shadow: none;
-        background-color: darken($--color-darker-primary, 20%);
-      }
+    &__address {
+      border-top: 1px solid rgba($--color-white, 0.5);
     }
   }
 }

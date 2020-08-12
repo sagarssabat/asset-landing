@@ -22,13 +22,12 @@ header {
 
   &.sticky {
     background-color: $--color-white;
-    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 18px 1px rgba($--color-black, 0.1);
 
     .sitenav {
       &__linkitem {
         color: $--color-black;
       }
-
     }
 
     .logo-dark {
@@ -41,4 +40,114 @@ header {
   }
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+  .sitenav {
+    background-color: $--color-white;
+    box-shadow: 0px 0px 18px 1px rgba($--color-black, 0.1);
+    padding: 16px 0px;
+
+    &__links {
+      position: fixed;
+      top: 70px;
+      left: 100%;
+      background-color: $--color-white;
+      width: 100%;
+      height: calc(100vh - 70px);
+      transition: 0.5s;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    &__linklist {
+      max-width: 720px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__linkitem {
+      color: $--color-black;
+
+      &.active {
+        a:after {
+          border-bottom: 2px solid $--color-black;
+        }
+      }
+    }
+
+    .logo-dark {
+      display: block;
+    }
+
+    .logo-light {
+      display: none;
+    }
+
+    .btn-login {
+      margin-left: auto;
+    }
+
+    &__hamburger {
+      width: 30px;
+      height: 24px;
+      position: relative;
+
+      .hamburger-inner {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 4px;
+        background-color: $--color-darker-primary;
+        transition: top .2s cubic-bezier(.33333, .66667, .66667, 1) .2s, transform .13s cubic-bezier(.55, .055, .675, .19);
+
+        &::before,
+        &::after {
+          content: '';
+          @extend .hamburger-inner;
+        }
+
+        &::before {
+          top: 10px;
+          width: 20px;
+          right: 0px;
+        }
+
+        &::after {
+          top: 20px;
+        }
+      }
+
+
+      &.active {
+        .hamburger-inner {
+          background-color: transparent;
+
+          &::before {
+            width: 100%;
+            top: 0;
+            transition: top .1s cubic-bezier(.33333, 0, .66667, .33333) .15s, transform .13s cubic-bezier(.215, .61, .355, 1) .22s;
+            transform: translate3d(0, 10px, 0) rotate(45deg);
+            background-color: $--color-primary;
+          }
+
+          &::after {
+            top: 0;
+            transition: top .2s cubic-bezier(.33333, 0, .66667, .33333), transform .13s cubic-bezier(.215, .61, .355, 1) .22s;
+            transform: translate3d(0, 10px, 0) rotate(-45deg);
+            background-color: $--color-primary;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .sitenav {
+    &__logo {
+      width: 120px;
+    }
+  }
+}

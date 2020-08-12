@@ -63,3 +63,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .sitenav {
+    &__linkitem {
+      a {
+        padding: 12px 0;
+      }
+    }
+  }
+}

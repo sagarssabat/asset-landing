@@ -2,14 +2,30 @@
 @import "_variables.scss";
 
 .form-control {
-  background-color: $--color-light-secondary;
-  border: 1px solid $--color-light-secondary;
+  // background-color: $--color-light-secondary;
+  // border: 1px solid $--color-light-secondary;
+  // transition: 0.2s;
+
+  // &:focus {
+  //   border: 1px solid darken($--color-light-secondary, 10%);
+  //   box-shadow: none;
+  //   background-color: $--color-light-secondary;
+  // }
+  padding: 22px 12px;
+  background-color: darken($--color-darker-primary, 20%);
+  border: 1px solid darken($--color-darker-primary, 20%);
   transition: 0.2s;
+  color: $--color-white;
+
+  &::placeholder {
+    color: rgba($--color-primary, 0.5);
+  }
 
   &:focus {
-    border: 1px solid darken($--color-light-secondary, 10%);
+    background-color: darken($--color-darker-primary, 20%);
+    border: 1px solid darken($--color-darker-primary, 20%);
+    color: $--color-white;
     box-shadow: none;
-    background-color: $--color-light-secondary;
   }
 
   &--highlight {
