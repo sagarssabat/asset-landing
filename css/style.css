@@ -856,6 +856,7 @@ button.btn-icon .feather {
   position: fixed;
   bottom: 85px;
   right: 15px;
+  z-index: 1;
 }
 .back_top img {
   width: 25px;
@@ -868,6 +869,10 @@ button.btn-icon .feather {
 
   .section-content .section__text {
     font-size: 16px;
+  }
+
+  .back_top {
+    bottom: 20px;
   }
 }
 body {
