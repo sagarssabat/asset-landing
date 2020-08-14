@@ -674,6 +674,19 @@
   padding: 5px 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .footer-bg .footer__bar .bar-wrap {
+    flex-direction: column;
+  }
+  .footer-bg .footer__bar .bar-wrap > p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  .footer-bg .footer__bar .terms-service {
+    font-size: 16px;
+  }
+}
 /* Color Variables */
 /* Button Variables */
 /* Font Variables */
