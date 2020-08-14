@@ -59,13 +59,13 @@ $("#owl-demo").owlCarousel({
   itemsDesktopSmall: [979, 3]
 });
 
-// $(window).on('scroll', function () {
-//   if ($(this).scrollTop() > 100) {
-//     $('.back_top').fadeIn();
-//   } else {
-//     $('.back_top').fadeOut();
-//   }
-// });
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 100) {
+    $('.back_top').fadeIn();
+  } else {
+    $('.back_top').fadeOut();
+  }
+});
 
 $('.back_top').on('click', function () {
   $("html, body").animate({

@@ -198,9 +198,9 @@ button {
   }
 }
 
-.site-content {
-  background-color: $--color-primary;
-}
+// .site-content {
+//   background-color: $--color-primary;
+// }
 
 .btn--align-right {
   transform: translateX(-100%);
@@ -301,6 +301,23 @@ button {
 .vertical-content {
   @include align-items(center);
   height: 100%;
+}
+
+.back_top {
+  @include roundedCorners(5);
+  @include flexbox();
+  @include justify-content(center);
+  background-color: $--color-highlight;
+  color: $--color-white;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 85px;
+  right: 15px;
+
+  img {
+    width: 25px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

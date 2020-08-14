@@ -943,10 +943,6 @@ button.btn-icon .feather {
   padding: 5px;
 }
 
-.site-content {
-  background-color: #5aa2f0;
-}
-
 .btn--align-right {
   transform: translateX(-100%);
   left: 100%;
@@ -1036,6 +1032,31 @@ button.btn-icon .feather {
   -ms-align-items: center;
   align-items: center;
   height: 100%;
+}
+
+.back_top {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  background-color: #E9922C;
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 85px;
+  right: 15px;
+}
+.back_top img {
+  width: 25px;
 }
 
 @media only screen and (max-width: 768px) {
