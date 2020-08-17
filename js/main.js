@@ -78,9 +78,19 @@ particlesJS.load('particles-js', '../assets/particles.json', function () {
   console.log('callback - particles.js config loaded');
 });
 
+let mobileView = screen.width;
 let hamburger = document.querySelector('.sitenav__hamburger');
 let openMenu = document.querySelector('.sitenav__links');
-hamburger.addEventListener('click', function () {
-  hamburger.classList.toggle('active');
-  openMenu.classList.toggle('active');
-})
+if (mobileView < 768) {
+  /* Code to Open drawer menu on click of hamburger */
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    openMenu.classList.toggle('active');
+  })
+
+  /* Code to Close drawer menu on click of navigation menu */
+  document.querySelectorAll('.sitenav__links').forEach(element => element.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    openMenu.classList.remove('active');
+  }));
+}
